@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<modification>
+	<id><![CDATA[Add product SKU to /catalog/controller/common/cart.php]]></id>
+	<name><![CDATA[Add product SKU to /catalog/controller/common/cart.php]]></name>
+	<code>knns_add_product_sku_common_cart</code>
+	<version>1.0.0</version>
+	<author>digital4u (Nikolas Branis)</author>
+	<link>https://www.digital4u.gr/</link>
+	<file path="catalog/controller/common/cart.php">
+		<operation>
+			<search><![CDATA['model'     => $product['model'],]]></search>
+			<add position="after"><![CDATA[				'sku'     => $product['sku'],]]></add>
+		</operation>
+	</file>
+</modification>
